@@ -1,6 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config';
+import './App.css';
 import Header from './common/header';
+import MainMenu from './common/menu';
+import routes from './routes';
 
 class App extends Component {
     render() {
@@ -8,7 +12,12 @@ class App extends Component {
             <BrowserRouter>
                 <Fragment>
                     <Header></Header>
-                    react-seller
+                    <div className="contentWrap">
+                        <MainMenu></MainMenu>
+                        <div className="mainContent">
+                            {renderRoutes(routes)}
+                        </div>
+                    </div>
                 </Fragment>
             </BrowserRouter>
         );

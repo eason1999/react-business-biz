@@ -1,0 +1,30 @@
+.menuWrap {
+    background-color: #fff;
+    float: left;
+    width: 200px;
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 100px;
+    .quickBtn {
+        display: block;
+        margin: 20px auto;
+        border: none;
+        height: 38px;
+        width: 75%;
+        border-radius: 40px;
+        color: #fff;
+        text-align: center;
+        line-height: 38px;
+        text-decoration: none;
+        background: linear-gradient(90deg, #fb7e2e, #ff3f56);
+        box-shadow: 0 5px 20px rgba(253, 83, 72, .3);
+    }
+    .menuLi {
+        &:after {
+            border-right: 0;
+            left: 2px;
+            top: 0;
+            border-left: 3px solid red;
+        }
+    }
+}
