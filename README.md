@@ -12,6 +12,6 @@
 打开 [http://localhost:3000](http://localhost:3000) ，在浏览器查看.
 
 
-### `npm run build`
+### 使用的技术栈
 
-使用的技术栈：`react`、`react-router-dom`、`react-redux`、`react-loadable`、`react-router-config`、`redux-thunk`、`prop-types`、`sass`、`axios`...
+`react`、`react-router-dom`、`react-redux`、`react-loadable`、`react-router-config`、`redux-thunk`、`prop-types`、`sass`、`axios`...
