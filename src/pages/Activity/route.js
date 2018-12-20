@@ -13,11 +13,6 @@ const Order = Loadable({
     loader: () => import('./order.jsx'),
     loading: Loading
 })
-// import AsyncComponent from '../../components/AsyncComponent';
-
-// const Check = AsyncComponent(() => import('./check.jsx'))
-// const Order = AsyncComponent(() => import('./order.jsx'))
-// const Activitylist = AsyncComponent(() => import('./list.jsx'))
 
 const acticityRoute = [{
     path: '/check',

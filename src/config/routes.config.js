@@ -1,7 +1,7 @@
 const ROUTES = [
     {
         key: 'Home',
-        link: '/',
+        link: '/home',
         iconType: 'home',
         text: '商家首页'
     }, {

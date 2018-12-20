@@ -1,17 +1,14 @@
 import Loadable from 'react-loadable';
 import { Loading } from '../../routes/loading';
 
-const Home = Loadable({
+const NotFound = Loadable({
     loader: () => import('./index.jsx'),
     loading: Loading
 })
 
-const homeRoute = [
-    {
-        path: '/home',
-        // exact: true,
-        component: Home
-    }
-]
+const notFoundRoute = [{
+    path: '*',
+    component: NotFound
+}]
 
-export default homeRoute;
+export default notFoundRoute;

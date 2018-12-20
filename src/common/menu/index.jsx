@@ -49,7 +49,20 @@ class MainMenu extends Component {
 
     componentDidMount() {
         let pathname = this.context.router.route.location.pathname;
+
+        if (pathname === '/') {
+            this.context.router.history.replace('/home')
+        }
+
+        pathname = pathname === '/' ? '/home' : pathname;
         let index = _.findIndex(handleRouteArr, route => route.link === pathname);
+        // 页面地址错误
+        if (index === -1) {
+            this.setState({
+                activeKey: ''
+            })
+            return false;
+        }
         let currentOpenKeys = _.find(handleRouteArr, (item) => {
             return item.link === pathname
         })
