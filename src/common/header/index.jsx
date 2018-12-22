@@ -3,8 +3,13 @@ import { Link } from 'react-router-dom';
 import { Menu, Dropdown, Icon } from 'antd';
 import style from './style.scss';
 
+
+const handleClick = () => {
+    console.log(23424)
+}
+
 const menu = (
-    <Menu>
+    <Menu onClick={handleClick}>
         <Menu.Item>退出</Menu.Item>
     </Menu>
 )
@@ -18,7 +23,7 @@ class Header extends Component {
                 <span className={style.plateformName}>小Y商家</span>
               </div>
               <ul className={style.list}>
-                <Link to="/">
+                <Link to="/home">
                   <li>商户管理中心</li>
                 </Link>
                 <Link to="/">

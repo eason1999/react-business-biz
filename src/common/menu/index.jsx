@@ -9,17 +9,17 @@ import { ROUTES } from '../../config/routes.config.js';
 const menuRoutes = _.clone(ROUTES);
 
 let rootKeys = [], handleRouteArr = []
-menuRoutes.forEach(item => {
-    if (item.subMenu) {
-        rootKeys.push(item.subMenu)
-        item.routes.forEach(path => {
-            path.subMenu = item.subMenu
-        })
-        handleRouteArr.push(...item.routes)
-    } else {
-        handleRouteArr.push(item)
-    }
-})
+_.forEach(menuRoutes, item => {
+  if (item.subMenu) {
+    rootKeys.push(item.subMenu);
+    _.forEach(item.routes, path => {
+      path.subMenu = item.subMenu;
+    });
+    handleRouteArr.push(...item.routes);
+  } else {
+    handleRouteArr.push(item);
+  }
+});
 
 const { SubMenu } = Menu;
 
@@ -73,12 +73,12 @@ class MainMenu extends Component {
     }
 
     render() {
-        let menuHtml = menuRoutes.map(item => {
+        let menuHtml = _.map(menuRoutes, item => {
             if (item.routes && item.routes.length) {
                 return (
                     <SubMenu key={item.key} title={<span><MenuIcon type={item.iconType} /><span>{item.text}</span></span>}>
                         {
-                            item.routes.map(route => {
+                            _.map(item.routes, route => {
                                 return (
                                     <Menu.Item key={route.key} className={style.menuLi}>
                                         <Link to={route.link}>{route.text}</Link>

@@ -15,7 +15,9 @@ class App extends Component {
                     <div className="contentWrap">
                         <MainMenu></MainMenu>
                         <div className="mainContent">
-                            {renderRoutes(routes)}
+                            <div className="innerContent">
+                                {renderRoutes(routes)}
+                            </div>
                         </div>
                     </div>
                 </Fragment>

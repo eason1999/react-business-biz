@@ -1,0 +1,19 @@
+.homeWrap {
+    .carouselWrap {
+        height: 265px;
+        width: 100%;
+        .slickSlide {
+            text-align: center;
+            height: 100%;
+            line-height: 265px;
+            background: #364d79;
+            overflow: hidden;
+            border-radius: 6px;
+            img {
+                margin: 0 auto;
+                width: auto;
+                height: 100%;
+            }
+        }
+    }
+}
