@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class Order extends Component {
+class Order extends PureComponent {
 
     render() {
         return (

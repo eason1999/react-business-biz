@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Menu, Icon } from 'antd';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import style from './style.scss';
@@ -28,7 +28,7 @@ const MenuIcon = Icon.createFromIconfontCN({
     scriptUrl: '//at.alicdn.com/t/font_720317_ot2rdjzbqh.js',
 });
 
-class MainMenu extends Component {
+class MainMenu extends PureComponent {
 
     constructor(props) {
         super(props)
@@ -135,4 +135,4 @@ MainMenu.contextTypes = {
     router: PropTypes.object
 }
 
-export  default MainMenu;
+export default withRouter(MainMenu);

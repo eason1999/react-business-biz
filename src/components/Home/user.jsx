@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { Button } from 'antd';
 import style from './style.scss';
 // import { homeActionTypes } from './store';
 import { homeActionCreators } from './store';
 
-class UserModule extends Component {
+class UserModule extends PureComponent {
     render() {
         let { userInfo, getUserInfo } = this.props;
         return (

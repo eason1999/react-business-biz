@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class Deposit extends Component {
+class Deposit extends PureComponent {
 
     render() {
         return (

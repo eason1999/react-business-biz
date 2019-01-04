@@ -1,4 +1,3 @@
-@import '~antd/dist/antd.css';
 #root {
     width: 100%;
     height: 100%;
@@ -44,6 +43,9 @@
 }
 :global(.ant-menu-item-active a) {
     color: #fb6e68 !important;
+}
+:global(.ant-table-content) {
+    background: #fff !important;
 }
 
 ::-webkit-scrollbar-track-piece {

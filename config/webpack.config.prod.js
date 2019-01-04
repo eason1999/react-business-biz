@@ -260,7 +260,6 @@ module.exports = {
             options: {
               formatter: require.resolve('react-dev-utils/eslintFormatter'),
               eslintPath: require.resolve('eslint'),
-              
             },
             loader: require.resolve('eslint-loader'),
           },
@@ -295,6 +294,14 @@ module.exports = {
               ),
               
               plugins: [
+                [
+                  'import',
+                  {
+                    'libraryName': 'antd',
+                    'libraryDirectory': 'es',
+                    'style': true
+                  }
+                ],
                 [
                   require.resolve('babel-plugin-named-asset-import'),
                   {
@@ -415,7 +422,7 @@ module.exports = {
             // it's runtime that would otherwise be processed through "file" loader.
             // Also exclude `html` and `json` extensions so they get processed
             // by webpacks internal loaders.
-            exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/, /\.scss$/],
+            exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.less$/,/\.html$/, /\.json$/, /\.scss$/],
             options: {
               name: 'static/media/[name].[hash:8].[ext]',
             },
@@ -423,6 +430,25 @@ module.exports = {
           // ** STOP ** Are you adding a new loader?
           // Make sure to add the new loader(s) before the "file" loader.
         ],
+      },
+      {
+        test: /\.less$/,
+        use: [
+          {
+            loader: 'style-loader'
+          }, {
+            loader: 'css-loader'
+          }, {
+            loader: 'less-loader',
+            options: {
+              sourceMap: true,
+              modifyVars: {
+                'primary-color': '#fb6e68'
+              },
+              javascriptEnabled: true,
+            }
+          }
+        ]
       },
     ],
   },

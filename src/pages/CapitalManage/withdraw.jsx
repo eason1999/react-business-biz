@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class Withdraw extends Component {
+class Withdraw extends PureComponent {
 
     render() {
         return (

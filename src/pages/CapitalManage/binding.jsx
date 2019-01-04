@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class Binding extends Component {
+class Binding extends PureComponent {
 
     render() {
         return (

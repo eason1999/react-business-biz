@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Carousel } from 'antd';
 import style from './style.scss';
 import ActivityModule from '../../components/Home/activity';
 import SpeedyModule from '../../components/Home/speedy';
 import UserModule from '../../components/Home/user';
 
-class Home extends Component {
+class Home extends PureComponent {
 
     render() {
         return (
